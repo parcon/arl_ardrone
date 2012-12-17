@@ -1,0 +1,21 @@
+<package>
+  <description brief="Ardrone_roi">
+
+     Ardrone_roi
+
+  </description>
+  <author>parcon</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/Ardrone_roi</url>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="ardrone_autonomy"/>
+  <depend package="pcl"/>
+  <depend package="pcl_ros"/>
+ 
+</package>
+
+

@@ -1,0 +1,20 @@
+<launch>
+
+<!---
+Parker Conroy
+launch file for haar feature tracker
+
+Modified from Copyright (c) 2012, Falkor Systems, Inc.
+
+-->
+
+
+	<node name="Control_from_Point" pkg="arl_ardrone_tracking" type="follow_haar" /> 
+ 
+	<node name="Haar_tracker" pkg="falkor_ardrone" type="ardrone_tracker.py"  output="screen" >
+    <param name="cascadefile" value="$(find falkor_ardrone)/cascade/lbpcascade_falkorlogobw.xml" />
+
+  </node>
+  
+  
+</launch>

@@ -1,0 +1,20 @@
+<!---
+Parker Conroy
+Launch file for haar feature tracker
+
+-->
+<launch>
+	<node name="Haar_tracker" pkg="falkor_ardrone" type="ardrone_tracker.py"  output="screen" >
+    <param name="cascadefile" value="$(find falkor_ardrone)/cascade/lbpcascade_falkorlogobw.xml" />
+    </node>
+  
+	<node name="Chase_Haar" pkg="arl_ardrone_tracking" type="chase_haar" /> 
+  
+	<node pkg="image_view" type="image_view" respawn="false" name="Haar_Tracker" output="screen"
+		 >
+                <param name="autosize" type="bool" value="TRUE" />
+                <param name="window_name" type="str" value="'AR drone Camera'" />
+                <remap from="image" to="ardrone_tracker/image" />
+	</node>
+  
+</launch>
